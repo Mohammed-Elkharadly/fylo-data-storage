@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 10px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: hsl(229, 57%, 11%);
+  position: relative;
+  overflow: hidden;
+}
+
+main::before {
+  content: url("images/bg-desktop.png");
+  position: absolute;
+  max-width: 100%;
+  bottom: -10rem;
+}
+
+@media (max-width: 56em) {
+    main::before {
+        content: url("images/bg-mobile.png");
+        top: 0;
+    }
+}
+
+main .container {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2rem;
+}
+
+@media (max-width: 56em) {
+  main .container {
+    flex-direction: column;
+  }
+}
+
+main .container .headding {
+  background-color: hsl(228, 56%, 26%);
+  padding: 3rem 10rem 3rem 3rem;
+  border-radius: 1rem 7rem 1rem 1rem;
+}
+
+main .container .headding .logo {
+  margin-bottom: 3rem;
+}
+
+main .container .headding .icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+main .container .headding .icons .image {
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 1rem;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .container .info {
+  background-color: hsl(228, 56%, 26%);
+  padding: 4rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+main .container .info .number {
+  position: absolute;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  top: -3rem;
+  right: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  color: hsl(229, 7%, 55%);
+  font-weight: 700;
+}
+
+@media (max-width: 56em) {
+  main .container .info .number {
+    top: 12rem;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+main .container .info .number .more {
+  border-style: solid;
+  border-width: 1.3rem;
+  border-color: white white transparent transparent;
+  position: absolute;
+  right: 0;
+  bottom: -2rem;
+}
+
+@media (max-width: 56em) {
+  main .container .info .number .more {
+    display: none;
+  }
+}
+
+main .container .info .number span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(229, 57%, 11%);
+}
+
+main .container .info p {
+  color: hsl(229, 7%, 55%);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 56em) {
+    main .container .info {
+        text-align: center;
+    }
+}
+
+main .container .info p span {
+  color: hsl(243, 100%, 93%);
+  font-weight: 700;
+}
+
+main .container .info .progrees {
+  width: 40rem;
+  height: 1.3rem;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 100vh;
+  margin: 1rem 0;
+}
+
+@media (max-width: 56em) {
+  main .container .info .progrees {
+    width: 24rem;
+  }
+}
+
+main .container .info .progrees span {
+  display: block;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  border-radius: 100vh;
+  position: relative;
+  border: 1px solid black;
+}
+
+main .container .info .progrees span::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  right: 0;
+}
+
+main .container .info .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .container .info .text span {
+  color: hsl(243, 100%, 93%);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
